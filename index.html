@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pawfect Partners, dresseur pour chiens à Strassen</title>
+<meta name="description" content="Steve, éducateur canin à Strassen : comportement, éducation, chiens au parcours difficile. Noté 5,0 sur Google (45 avis). Appel ou SMS.">
+<meta property="og:title" content="Pawfect Partners, dresseur pour chiens à Strassen">
+<meta property="og:description" content="Steve lit le caractère, le passé et les instincts de votre chien avant de l’éduquer. 5,0 sur Google, 45 avis.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#27412e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2327412e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' font-style='italic' fill='%23f3ece1'%3EP%3C/text%3E%3Ccircle cx='46' cy='18' r='4' fill='%23e3aa5e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&family=Instrument+Sans:wght@400;600&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Pawfect Partners",
+  "description": "Dresseur pour chiens : éducation, obéissance et comportement canin.",
+  "telephone": "+352621491508",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12A Duerfstrooss",
+    "postalCode": "3985",
+    "addressLocality": "Pissange Reckange-sur-Mess",
+    "addressCountry": "LU"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 49.550142199999996, "longitude": 6.0008836 },
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJHxncBQBLlUcRP2zc7uh4z_k",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }]
+}
+</script>
+<style>
+/* ==========================================================================
+   DESIGN DECISIONS: Pawfect Partners
+   Direction : WARM ARTISAN. A one-man dog trainer (Steve) whose photos are
+     all outdoors, low sun, grass, earth, dogs leaning into him. Nothing
+     corporate: warm paper, a friendly high-contrast serif, hand-feel details
+     (arch frames, a rotating stamp, italic asides), photo collage.
+   Palette (pulled from the photos):
+     paper #f3ece1 (sunlit concrete, photo 10) · forest #27412e (the pines in
+     photo 02, the meadow in photo 08) · clay #a44824 (Spanish walls in photo 04,
+     the brown harness in photo 12) · ochre #e3aa5e (the sunset in photo 07),
+     used on dark only. One strong move: forest-green fields; clay for accents.
+   Type : Fraunces (500 roman + 400 italic) for display, the "voice". Instrument
+     Sans (400/600) for body and labels: humanist, calm, very legible.
+   Hero : typographic poster "Steve parle chien." + an arch-framed photo of Steve
+     among the dogs, a round inset portrait and a rotating "5,0 · 45 avis" stamp.
+   Rhythm : hero → review marquee → proof (giant 5,0 + swipe rail) → method
+     (sticky photo split) → oversized numbered list → full-bleed sunset photo with
+     an overlapping quote (signature moment) → offset collage → live hours/map
+     split → forest contact block → footer. No two neighbours share a layout.
+   ========================================================================== */
+:root{
+  --bg:#f3ece1; --surface:#e9dfcf; --ink:#1e2620; --ink-soft:#4b544c;
+  --brand:#27412e; --brand-ink:#f3ece1; --accent:#a44824; --sun:#e3aa5e;
+  --line:rgba(30,38,32,.16); --line-inv:rgba(243,236,225,.22);
+
+  --font-display:"Fraunces", Georgia, "Times New Roman", serif;
+  --font-body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --step--1:clamp(.875rem, .85rem + .12vw, .95rem);
+  --step-0:clamp(1.0625rem, 1rem + .25vw, 1.1875rem);
+  --step-1:clamp(1.25rem, 1.14rem + .5vw, 1.55rem);
+  --step-2:clamp(1.5rem, 1.28rem + 1vw, 2.15rem);
+  --step-3:clamp(1.95rem, 1.5rem + 2.2vw, 3.2rem);
+  --step-4:clamp(2.5rem, 1.7rem + 4vw, 5rem);
+  --step-5:clamp(3.2rem, 1.9rem + 7vw, 7.5rem);
+  --step-6:clamp(3.6rem, 17vw, 10.5rem);
+
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px; --space-10:128px;
+  --section:clamp(64px, 12vw, 160px);
+  --gutter:clamp(20px, 5vw, 48px);
+  --max:1280px;
+
+  --r-1:6px; --r-arch:999px 999px 6px 6px;
+
+  --ease-out:cubic-bezier(.16,1,.3,1); --ease-in-out:cubic-bezier(.65,0,.35,1);
+  --dur-1:180ms; --dur-2:400ms; --dur-3:800ms;
+  --bar-h:0px;
+}
+@media (max-width:767px){ :root{ --bar-h:calc(64px + env(safe-area-inset-bottom)); } }
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 var(--step-0)/1.6 var(--font-body);
+  padding-bottom:var(--bar-h); overflow-x:hidden;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+body::before{ /* paper grain */
+  content:""; position:fixed; inset:0; z-index:100; pointer-events:none; opacity:.07; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+body.menu-open{ overflow:hidden; }
+img{ display:block; max-width:100%; height:auto; }
+a{ color:inherit; }
+::selection{ background:var(--sun); color:var(--ink); }
+:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:4px; }
+.inv :focus-visible{ outline-color:var(--sun); }
+h1,h2,h3{ font-family:var(--font-display); font-weight:500; margin:0; letter-spacing:-.02em; line-height:1; text-wrap:balance; font-optical-sizing:auto; }
+p{ margin:0; text-wrap:pretty; }
+em{ font-style:italic; }
+.skip{ position:absolute; left:var(--space-4); top:-60px; z-index:200; background:var(--ink); color:var(--bg); padding:var(--space-3) var(--space-4); border-radius:var(--r-1); }
+.skip:focus{ top:var(--space-4); }
+.nw{ white-space:nowrap; }
+.sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+.wrap{ max-width:var(--max); margin-inline:auto; padding-inline:var(--gutter); }
+.grid{ display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); column-gap:var(--gutter); }
+@media (min-width:960px){ .grid{ grid-template-columns:repeat(12, minmax(0,1fr)); } }
+section{ scroll-margin-top:72px; }
+
+.label{
+  font:600 var(--step--1)/1.2 var(--font-body); letter-spacing:.14em; text-transform:uppercase;
+  display:inline-flex; align-items:center; gap:var(--space-3); color:var(--accent);
+}
+.label::before{ content:""; width:28px; height:1px; background:currentColor; }
+.inv .label{ color:var(--sun); }
+.lede{ font-size:var(--step-1); line-height:1.45; color:var(--ink-soft); max-width:34ch; }
+.stars{ display:inline-flex; gap:2px; color:var(--accent); }
+.stars svg{ width:1em; height:1em; }
+.inv .stars{ color:var(--sun); }
+.icon{ width:20px; height:20px; flex:none; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+
+/* links with drawn underline */
+.ul{ text-decoration:none; background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat; padding-bottom:2px; transition:background-size var(--dur-2) var(--ease-out); }
+@media (hover:hover){ .ul:hover{ background-size:0 1px; background-position:100% 100%; } }
+
+/* buttons */
+.btn{
+  --b:var(--ink); --t:var(--bg);
+  display:inline-flex; align-items:center; justify-content:center; gap:var(--space-3);
+  min-height:52px; padding:0 var(--space-5); border-radius:999px; white-space:nowrap; border:1px solid var(--b);
+  background:var(--b); color:var(--t); font:600 var(--step-0)/1 var(--font-body); text-decoration:none;
+  position:relative; overflow:hidden; isolation:isolate;
+  transition:transform var(--dur-1) var(--ease-out), color var(--dur-2) var(--ease-out);
+}
+.btn::after{ content:""; position:absolute; inset:0; z-index:-1; background:var(--accent); transform:translateY(101%); transition:transform var(--dur-2) var(--ease-out); }
+.btn:active{ transform:scale(.97); }
+.btn--ghost{ background:transparent; color:var(--ink); }
+.btn--ghost::after{ background:var(--ink); }
+.inv .btn{ --b:var(--bg); --t:var(--brand); }
+.inv .btn--ghost{ background:transparent; color:var(--bg); }
+.inv .btn--ghost::after{ background:var(--bg); }
+@media (hover:hover){
+  .btn:hover::after{ transform:none; }
+  .btn:hover{ color:var(--bg); }
+  .inv .btn:hover{ color:var(--bg); }
+  .inv .btn--ghost:hover{ color:var(--brand); }
+  .btn:hover .icon{ transform:rotate(-8deg); }
+}
+.btn .icon{ transition:transform var(--dur-2) var(--ease-out); }
+
+/* ---------- header ---------- */
+.site-header{ position:sticky; top:0; z-index:50; transition:background-color var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out); }
+.site-header .wrap{ display:flex; align-items:center; justify-content:space-between; height:72px; transition:height var(--dur-2) var(--ease-out); }
+.site-header.is-scrolled{ background:rgba(243,236,225,.94); box-shadow:0 1px 0 var(--line); }
+.site-header.is-scrolled .wrap{ height:60px; }
+.brand{ display:inline-flex; align-items:center; gap:var(--space-3); text-decoration:none; min-height:44px; }
+.brand__mark{ width:38px; height:38px; flex:none; transition:transform var(--dur-2) var(--ease-out), width var(--dur-2) var(--ease-out), height var(--dur-2) var(--ease-out); }
+.is-scrolled .brand__mark{ width:32px; height:32px; }
+.brand__name{ font:500 1.2rem/1 var(--font-display); letter-spacing:-.01em; }
+.brand__name em{ color:var(--accent); }
+.nav{ display:none; }
+.header-cta{ display:none; }
+.menu-btn{
+  display:inline-flex; align-items:center; gap:var(--space-2); min-height:44px; min-width:44px; padding:0 var(--space-4);
+  background:transparent; border:1px solid var(--line); border-radius:999px; color:var(--ink); font:600 var(--step--1)/1 var(--font-body); letter-spacing:.06em; text-transform:uppercase; cursor:pointer;
+}
+.menu-btn__lines{ width:18px; height:10px; position:relative; }
+.menu-btn__lines::before,.menu-btn__lines::after{ content:""; position:absolute; left:0; right:0; height:1.6px; background:currentColor; border-radius:2px; transition:transform var(--dur-2) var(--ease-out); }
+.menu-btn__lines::before{ top:0; } .menu-btn__lines::after{ bottom:0; }
+.menu-btn[aria-expanded="true"] .menu-btn__lines::before{ transform:translateY(4.2px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] .menu-btn__lines::after{ transform:translateY(-4.2px) rotate(-45deg); }
+.menu{
+  position:fixed; inset:0; z-index:40; background:var(--brand); color:var(--brand-ink);
+  padding:calc(96px + var(--space-5)) var(--gutter) calc(var(--space-7) + var(--bar-h));
+  display:flex; flex-direction:column; justify-content:space-between; gap:var(--space-7);
+  visibility:hidden; opacity:0; transition:opacity var(--dur-2) var(--ease-out), visibility 0s linear var(--dur-2);
+}
+.menu.is-open{ visibility:visible; opacity:1; transition:opacity var(--dur-2) var(--ease-out); }
+.menu ol{ list-style:none; margin:0; padding:0; counter-reset:m; }
+.menu li{ counter-increment:m; border-top:1px solid var(--line-inv); }
+.menu li a{ display:flex; align-items:baseline; gap:var(--space-4); padding:var(--space-3) 0; font:500 clamp(2rem, 9vw, 3.2rem)/1.1 var(--font-display); text-decoration:none; letter-spacing:-.02em;
+  opacity:0; transform:translateY(16px); transition:opacity var(--dur-2) var(--ease-out), transform var(--dur-3) var(--ease-out); }
+.menu li a::before{ content:"0" counter(m); font:600 var(--step--1)/1 var(--font-body); color:var(--sun); letter-spacing:.1em; }
+.menu.is-open li a{ opacity:1; transform:none; }
+.menu.is-open li:nth-child(2) a{ transition-delay:50ms; } .menu.is-open li:nth-child(3) a{ transition-delay:100ms; }
+.menu.is-open li:nth-child(4) a{ transition-delay:150ms; } .menu.is-open li:nth-child(5) a{ transition-delay:200ms; }
+.menu.is-open li:nth-child(6) a{ transition-delay:250ms; }
+.menu__foot{ font-size:var(--step--1); color:rgba(243,236,225,.8); }
+.menu-open .site-header{ background:transparent; box-shadow:none; color:var(--brand-ink); }
+.menu-open .site-header .menu-btn{ color:var(--brand-ink); border-color:var(--line-inv); }
+.menu-open .brand__name em{ color:var(--sun); }
+@media (min-width:960px){
+  .menu-btn,.menu{ display:none; }
+  .nav{ display:flex; gap:var(--space-6); }
+  .nav a{ font-size:var(--step--1); font-weight:600; letter-spacing:.04em; text-decoration:none; padding:var(--space-2) 0; background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat; transition:background-size var(--dur-2) var(--ease-out); }
+  .nav a:hover{ background-size:100% 1px; }
+  .header-cta{ display:inline-flex; min-height:44px; font-size:var(--step--1); }
+}
+
+/* ---------- hero ---------- */
+.hero{ padding-top:var(--space-5); padding-bottom:var(--section); position:relative; overflow-x:clip; }
+.hero__grid{ display:grid; grid-template-columns:max-content minmax(0,1fr); column-gap:var(--space-4); align-items:end;
+  grid-template-areas:"meta meta" "h1 media" "body body"; }
+.hero__meta{ grid-area:meta; display:flex; flex-wrap:wrap; align-items:center; gap:var(--space-3) var(--space-5); margin-bottom:var(--space-5); }
+.status{ display:inline-flex; align-items:center; gap:var(--space-2); font:600 var(--step--1)/1.2 var(--font-body); color:var(--ink); }
+.status__dot{ width:8px; height:8px; border-radius:50%; background:var(--brand); flex:none; }
+.status[data-open="true"] .status__dot{ background:#2f7a45; animation:pulse 2.4s var(--ease-out) infinite; }
+.status[data-open="false"] .status__dot{ background:var(--accent); }
+@keyframes pulse{ 0%{ box-shadow:0 0 0 0 rgba(47,122,69,.5); } 70%,100%{ box-shadow:0 0 0 10px rgba(47,122,69,0); } }
+.hero h1{ grid-area:h1; font-size:clamp(3.2rem, 15vw, 7.5rem); line-height:.9; letter-spacing:-.045em; margin-left:-.04em; }
+.hero h1 em{ color:var(--accent); font-weight:400; letter-spacing:-.03em; }
+.line{ display:block; overflow:hidden; padding-bottom:.06em; margin-bottom:-.06em; }
+.line > span{ display:inline-block; }
+.hero__body{ grid-area:body; }
+.hero__sub{ margin-top:var(--space-5); font-size:var(--step-1); line-height:1.45; color:var(--ink-soft); max-width:30ch; }
+.hero__proof{ display:inline-flex; align-items:center; gap:var(--space-3); margin-top:var(--space-4); font-weight:600; font-size:var(--step--1); text-decoration:none; min-height:44px; }
+.hero__proof b{ font:500 var(--step-1)/1 var(--font-display); }
+.hero__proof span.u{ border-bottom:1px solid var(--line); padding-bottom:2px; transition:border-color var(--dur-1); }
+.hero__proof:hover span.u{ border-color:currentColor; }
+.hero__cta{ display:flex; gap:var(--space-3); margin-top:var(--space-4); }
+.hero__cta .btn:first-child{ flex:1; }
+.btn--sms{ width:52px; padding:0; flex:none; }
+.btn--sms .btn__lbl{ display:none; }
+@media (min-width:640px){ .btn--sms{ width:auto; padding:0 var(--space-5); } .btn--sms .btn__lbl{ display:inline; } .hero__cta .btn:first-child{ flex:0 0 auto; } }
+
+.hero__media{ grid-area:media; position:relative; }
+.arch{ border-radius:var(--r-arch); overflow:hidden; aspect-ratio:4/5; background:var(--surface); }
+.arch img{ width:100%; height:100%; object-fit:cover; }
+.hero__main{ aspect-ratio:3/4; }
+.hero__main img{ object-position:52% 40%; }
+.hero__inset{ display:none; position:absolute; aspect-ratio:1; border-radius:50%; overflow:hidden; border:6px solid var(--bg); background:var(--surface); }
+.hero__inset img{ width:100%; height:100%; object-fit:cover; object-position:46% 52%; }
+.stamp{ position:absolute; left:-62px; top:-6px; width:clamp(84px, 24vw, 148px); aspect-ratio:1; color:var(--ink); background:var(--bg); border-radius:50%; display:grid; place-items:center; }
+.stamp svg{ position:absolute; inset:0; width:100%; height:100%; }
+.stamp__ring{ animation:spin 24s linear infinite; transform-origin:50% 50%; }
+.stamp__ring text{ font:600 9.5px var(--font-body); letter-spacing:.18em; text-transform:uppercase; fill:currentColor; }
+.stamp__core{ font:500 clamp(1.15rem, 5vw, 2.2rem)/1 var(--font-display); position:relative; letter-spacing:-.03em; text-align:center; }
+.stamp__core small{ display:block; font-size:.42em; color:var(--accent); letter-spacing:0; margin-top:2px; }
+@keyframes spin{ to{ transform:rotate(360deg); } }
+.hero__caption{ display:none; }
+
+@media (min-width:960px){
+  .hero{ padding-top:var(--space-5); padding-bottom:var(--space-9); }
+  .hero__grid{ grid-template-columns:repeat(12, minmax(0,1fr)); column-gap:var(--gutter); grid-template-areas:none; grid-template-rows:auto auto 1fr; align-items:start; }
+  .hero__meta{ grid-column:1 / 8; grid-row:1; padding-top:var(--space-6); }
+  .hero h1{ grid-column:1 / 9; grid-row:2; font-size:clamp(5rem, 9.4vw, 9.5rem); position:relative; z-index:2; }
+  .hero__body{ grid-column:1 / 7; grid-row:3; }
+  .hero__media{ grid-column:8 / 13; grid-row:1 / 4; }
+  .hero__main{ aspect-ratio:4/5; }
+  .hero__inset{ display:block; left:-30%; bottom:4%; width:50%; }
+  .stamp{ left:auto; right:-6%; top:4%; }
+  .hero__caption{ display:block; margin-top:var(--space-5); font:italic 400 var(--step--1)/1.4 var(--font-display); color:var(--ink-soft); text-align:right; }
+}
+
+/* ---------- marquee ---------- */
+.marquee{ background:var(--brand); color:var(--brand-ink); overflow:hidden; padding:var(--space-5) 0; border-block:1px solid var(--brand); }
+.marquee__track{ display:flex; width:max-content; animation:marq 46s linear infinite; }
+.marquee ul{ display:flex; list-style:none; margin:0; padding:0; }
+.marquee li{ display:flex; align-items:center; white-space:nowrap; font:400 italic var(--step-2)/1.1 var(--font-display); padding-right:var(--space-6); gap:var(--space-6); }
+.marquee li::after{ content:""; width:10px; height:10px; background:var(--sun); transform:rotate(45deg); flex:none; }
+@keyframes marq{ to{ transform:translateX(-50%); } }
+
+/* ---------- proof ---------- */
+.proof{ padding-block:var(--section); }
+.proof__head{ grid-column:1 / -1; }
+.score{ display:flex; align-items:flex-end; gap:var(--space-4); margin-top:var(--space-5); }
+.score__num{ font:500 var(--step-5)/.8 var(--font-display); letter-spacing:-.05em; }
+.score__side{ padding-bottom:.4em; }
+.score__side .stars{ font-size:1.25rem; }
+.score__side p{ font-size:var(--step--1); color:var(--ink-soft); margin-top:var(--space-1); }
+.proof h2{ font-size:var(--step-3); margin-top:var(--space-6); max-width:14ch; }
+.proof__link{ display:inline-flex; align-items:center; gap:var(--space-2); margin-top:var(--space-5); font-weight:600; min-height:44px; }
+.rail-wrap{ grid-column:1 / -1; margin-top:var(--space-7); position:relative; }
+.rail{
+  display:grid; grid-auto-flow:column; grid-auto-columns:min(84%, 400px); gap:var(--space-4);
+  overflow-x:auto; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; scrollbar-width:none;
+  margin-inline:calc(var(--gutter) * -1); padding-inline:var(--gutter); scroll-padding-inline:var(--gutter);
+  padding-bottom:var(--space-2);
+}
+.rail::-webkit-scrollbar{ display:none; }
+.review{ scroll-snap-align:start; background:var(--surface); border-radius:var(--r-1); padding:var(--space-6) var(--space-5) var(--space-5); display:flex; flex-direction:column; gap:var(--space-5); margin:0; }
+.review::before{ content:"“"; font:400 5rem/.5 var(--font-display); color:var(--accent); height:.35em; }
+.review blockquote{ margin:0; font-size:var(--step-0); line-height:1.55; flex:1; }
+.review figcaption{ display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--line); padding-top:var(--space-4); font-weight:600; font-size:var(--step--1); }
+.rail-ctrl{ display:none; }
+@media (min-width:960px){
+  .proof__head{ grid-column:1 / 5; position:sticky; top:120px; align-self:start; }
+  .rail-wrap{ grid-column:5 / 13; margin-top:0; }
+  .rail{ grid-auto-columns:calc(50% - var(--space-4) / 2); margin-inline:0; padding-inline:0; scroll-padding-inline:0; }
+  .rail-ctrl{ display:flex; gap:var(--space-3); margin-top:var(--space-5); justify-content:flex-end; }
+  .rail-ctrl button{ width:52px; height:52px; border-radius:50%; border:1px solid var(--ink); background:transparent; color:var(--ink); display:grid; place-items:center; cursor:pointer; transition:background-color var(--dur-1), color var(--dur-1), transform var(--dur-1); }
+  .rail-ctrl button:hover{ background:var(--ink); color:var(--bg); }
+  .rail-ctrl button:active{ transform:scale(.94); }
+}
+
+/* ---------- method (sticky split) ---------- */
+.method{ padding-block:var(--section); background:var(--surface); }
+.method__media{ grid-column:1 / -1; margin:0; }
+.method__media .frame{ aspect-ratio:4/5; overflow:hidden; border-radius:var(--r-1); }
+.method__media img{ width:100%; height:100%; object-fit:cover; object-position:50% 55%; }
+.method__media figcaption{ margin-top:var(--space-3); font:italic 400 var(--step--1)/1.4 var(--font-display); color:var(--ink-soft); }
+.method__body{ grid-column:1 / -1; margin-top:var(--space-7); }
+.method h2{ font-size:var(--step-4); margin-top:var(--space-4); }
+.method h2 em{ color:var(--accent); font-weight:400; }
+.method .lede{ margin-top:var(--space-5); max-width:38ch; }
+.steps{ list-style:none; margin:var(--space-7) 0 0; padding:0; }
+.steps li{ display:grid; grid-template-columns:3.2rem 1fr; gap:var(--space-4); padding-block:var(--space-6); border-top:1px solid var(--line); }
+.steps__n{ font:400 italic var(--step-2)/1 var(--font-display); color:var(--accent); }
+.steps h3{ font-size:var(--step-2); line-height:1.1; }
+.steps p{ margin-top:var(--space-3); color:var(--ink-soft); max-width:52ch; }
+.steps q{ quotes:"« " " »"; color:var(--ink); }
+@media (min-width:960px){
+  .method__media{ grid-column:1 / 6; position:sticky; top:100px; align-self:start; }
+  .method__media .frame{ aspect-ratio:3/4; }
+  .method__media img{ object-position:50% 64%; }
+  .method__body{ grid-column:7 / 13; margin-top:0; padding-top:var(--space-8); }
+}
+
+/* ---------- care list (oversized numbers) ---------- */
+.care{ padding-block:var(--section); }
+.care__head{ display:flex; flex-direction:column; gap:var(--space-4); margin-bottom:var(--space-8); }
+.care h2{ font-size:var(--step-4); max-width:16ch; }
+.care__list{ list-style:none; margin:0; padding:0; counter-reset:c; }
+.care__item{ counter-increment:c; border-top:1px solid var(--ink); padding-block:var(--space-6) var(--space-7); }
+.care__item:last-child{ border-bottom:1px solid var(--ink); }
+.care__num::before{ content:"0" counter(c); font:400 italic var(--step-5)/.8 var(--font-display); color:var(--accent); letter-spacing:-.04em; }
+.care__item h3{ font-size:var(--step-3); line-height:1.02; margin-top:var(--space-4); }
+.care__item blockquote{ margin:var(--space-4) 0 0; color:var(--ink-soft); max-width:44ch; }
+.care__item blockquote cite{ display:block; margin-top:var(--space-2); font-style:normal; font-weight:600; font-size:var(--step--1); color:var(--ink); letter-spacing:.04em; }
+@media (min-width:960px){
+  .care__item{ display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); column-gap:var(--gutter); align-items:baseline; padding-block:var(--space-7); }
+  .care__num{ grid-column:1 / 3; }
+  .care__item h3{ grid-column:3 / 9; margin:0; }
+  .care__item blockquote{ grid-column:9 / 13; margin:0; padding-left:var(--space-5); }
+  .care__head{ flex-direction:row; justify-content:space-between; align-items:flex-end; }
+}
+
+/* ---------- signature: full-bleed sunset ---------- */
+.sunset{ position:relative; background:var(--ink); color:var(--brand-ink); }
+.sunset__img{ aspect-ratio:4/5; overflow:hidden; }
+.sunset__img img{ width:100%; height:100%; object-fit:cover; object-position:40% 32%; }
+.sunset__panel{ position:relative; margin:-22% var(--gutter) 0; background:var(--brand); padding:var(--space-7) var(--space-5); border-radius:var(--r-1); z-index:2; }
+.sunset blockquote{ margin:0; }
+.sunset blockquote p{ font:400 italic var(--step-4)/1 var(--font-display); letter-spacing:-.025em; text-wrap:balance; }
+.sunset blockquote p b{ font-style:normal; font-weight:500; color:var(--sun); }
+.sunset figcaption{ margin-top:var(--space-5); display:flex; gap:var(--space-3); align-items:center; font-size:var(--step--1); font-weight:600; }
+.sunset__pad{ height:var(--section); background:var(--ink); }
+@media (min-width:960px){
+  .sunset__img{ aspect-ratio:auto; height:min(92svh, 860px); }
+  .sunset__img img{ object-position:50% 34%; }
+  .sunset__panel{ position:absolute; right:max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter))); bottom:calc(var(--space-9) * -1); margin:0; width:min(560px, 46vw); padding:var(--space-8) var(--space-7); }
+  .sunset__pad{ height:calc(var(--space-9) + var(--space-8)); }
+}
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion:no-preference){
+    .sunset__img img{ animation:drift linear both; animation-timeline:view(); animation-range:entry 0% exit 100%; }
+    @keyframes drift{ from{ transform:scale(1.14) translateY(-3%); } to{ transform:scale(1.02) translateY(3%); } }
+  }
+}
+
+/* ---------- gallery ---------- */
+.gallery{ padding-block:var(--section); background:var(--ink); color:var(--brand-ink); }
+.gallery__head{ display:flex; flex-direction:column; gap:var(--space-4); margin-bottom:var(--space-7); }
+.gallery h2{ font-size:var(--step-4); }
+.gallery h2 em{ color:var(--sun); font-weight:400; }
+.gallery__head p{ color:rgba(243,236,225,.78); max-width:36ch; }
+.collage{ display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:var(--space-4); overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none;
+  margin-inline:calc(var(--gutter) * -1); padding-inline:var(--gutter); scroll-padding-inline:var(--gutter); list-style:none; margin-block:0; }
+.collage::-webkit-scrollbar{ display:none; }
+.collage figure{ margin:0; scroll-snap-align:start; }
+.collage .ph{ aspect-ratio:4/5; overflow:hidden; border-radius:var(--r-1); background:#333; }
+.collage img{ width:100%; height:100%; object-fit:cover; transition:transform var(--dur-3) var(--ease-out); }
+.collage figcaption{ margin-top:var(--space-3); font:italic 400 var(--step--1)/1.4 var(--font-display); color:rgba(243,236,225,.78); }
+.g-a img{ object-position:50% 40%; } .g-b img{ object-position:72% 50%; } .g-c img{ object-position:50% 56%; } .g-d img{ object-position:50% 66%; }
+.swipe-hint{ display:flex; align-items:center; gap:var(--space-2); margin-top:var(--space-5); font-size:var(--step--1); color:rgba(243,236,225,.7); }
+@media (min-width:960px){
+  .gallery__head{ flex-direction:row; justify-content:space-between; align-items:flex-end; }
+  .swipe-hint{ display:none; }
+  .collage{ overflow:visible; margin:0; padding:0; grid-auto-flow:row; grid-template-columns:repeat(12, minmax(0,1fr)); column-gap:var(--gutter); row-gap:var(--space-6);
+    grid-template-areas:"a a a a a b b b b b b b" "a a a a a c c c d d d d"; }
+  .collage figure{ display:flex; flex-direction:column; }
+  .collage .ph{ aspect-ratio:auto; flex:1; min-height:0; }
+  .g-a{ grid-area:a; } .g-b{ grid-area:b; } .g-c{ grid-area:c; } .g-d{ grid-area:d; }
+  .g-b .ph{ aspect-ratio:16/9; flex:none; }
+  .g-c .ph,.g-d .ph{ height:400px; flex:none; }
+  .g-a{ margin-top:var(--space-9); }
+  .collage figure:hover img{ transform:scale(1.03); }
+}
+
+/* ---------- visit: hours + map ---------- */
+.visit{ padding-block:var(--section); }
+.visit__hours{ grid-column:1 / -1; }
+.visit__map{ grid-column:1 / -1; margin-top:var(--space-8); }
+.visit h2{ font-size:var(--step-4); margin-top:var(--space-4); }
+.clock{ margin-top:var(--space-6); padding:var(--space-5); border:1px solid var(--ink); border-radius:var(--r-1); display:grid; gap:var(--space-2); }
+.clock__time{ font:500 var(--step-5)/.9 var(--font-display); letter-spacing:-.04em; font-variant-numeric:tabular-nums lining-nums; }
+.clock .status{ font-size:var(--step-0); }
+.clock p{ font-size:var(--step--1); color:var(--ink-soft); }
+.hours{ width:100%; border-collapse:collapse; margin-top:var(--space-6); font-size:var(--step-0); }
+.hours th,.hours td{ padding:var(--space-3) 0; border-bottom:1px solid var(--line); text-align:left; font-weight:400; }
+.hours th{ text-transform:capitalize; }
+.hours td{ text-align:right; color:var(--ink-soft); }
+.hours tr.is-today th,.hours tr.is-today td{ color:var(--ink); font-weight:600; }
+.hours tr.is-today th::after{ content:"aujourd’hui"; margin-left:var(--space-3); font:600 .7rem/1 var(--font-body); letter-spacing:.12em; text-transform:uppercase; color:var(--bg); background:var(--accent); padding:4px 8px; border-radius:999px; vertical-align:middle; }
+.practical{ list-style:none; margin:var(--space-6) 0 0; padding:0; display:flex; flex-wrap:wrap; gap:var(--space-2); }
+.practical li{ font-size:var(--step--1); padding:var(--space-2) var(--space-3); border:1px solid var(--line); border-radius:999px; display:inline-flex; align-items:center; gap:var(--space-2); }
+.practical .icon{ width:16px; height:16px; color:var(--accent); }
+.map{ position:relative; aspect-ratio:4/5; border-radius:var(--r-1); overflow:hidden; background:var(--surface); }
+.map iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; filter:grayscale(.35) sepia(.12) contrast(1.02); }
+.map__fallback{ position:absolute; inset:0; display:grid; place-items:center; text-align:center; padding:var(--space-5); color:var(--ink-soft); font-size:var(--step--1); }
+.address{ margin-top:var(--space-5); display:flex; flex-direction:column; gap:var(--space-4); }
+.address p{ font:500 var(--step-2)/1.15 var(--font-display); letter-spacing:-.01em; }
+.address .row{ display:flex; flex-wrap:wrap; gap:var(--space-3); }
+@media (min-width:960px){
+  .visit__hours{ grid-column:1 / 6; }
+  .visit__map{ grid-column:7 / 13; margin-top:0; }
+  .map{ aspect-ratio:1 / 1.05; }
+}
+
+/* ---------- contact ---------- */
+.contact{ background:var(--brand); color:var(--brand-ink); padding-block:var(--section); overflow:hidden; }
+.contact__body{ grid-column:1 / -1; }
+.contact h2{ font-size:var(--step-5); line-height:.92; letter-spacing:-.04em; }
+.contact h2 em{ color:var(--sun); font-weight:400; }
+.contact__body > p{ margin-top:var(--space-5); font-size:var(--step-1); color:rgba(243,236,225,.86); max-width:32ch; line-height:1.45; }
+.phone-big{ display:inline-block; margin-top:var(--space-6); font:500 clamp(1.75rem, 8.4vw, 4.2rem)/1 var(--font-display); letter-spacing:-.02em; white-space:nowrap; text-decoration:none; padding-block:var(--space-2);
+  background:linear-gradient(var(--sun),var(--sun)) 0 100%/100% 2px no-repeat; transition:background-size var(--dur-2) var(--ease-out); }
+@media (hover:hover){ .phone-big:hover{ background-size:0 2px; background-position:100% 100%; } }
+.contact__cta{ display:flex; flex-wrap:wrap; gap:var(--space-3); margin-top:var(--space-6); }
+.contact__cta .btn{ flex:1 1 150px; }
+.contact__photo{ grid-column:1 / -1; margin-top:var(--space-8); }
+.contact__photo .arch{ aspect-ratio:4/5; width:72%; margin-left:auto; }
+.contact__photo img{ object-position:40% 12%; }
+@media (min-width:960px){
+  .contact__body{ grid-column:1 / 8; align-self:center; }
+  .contact__photo{ grid-column:9 / 13; margin-top:0; }
+  .contact__photo .arch{ width:100%; }
+  .contact__cta .btn{ flex:0 0 auto; }
+}
+
+/* ---------- footer ---------- */
+.site-footer{ padding-block:var(--space-8) var(--space-7); font-size:var(--step--1); color:var(--ink-soft); }
+.site-footer .grid{ row-gap:var(--space-5); }
+.site-footer .brand{ grid-column:1 / -1; color:var(--ink); }
+.site-footer address{ font-style:normal; grid-column:1 / -1; }
+.site-footer .links{ grid-column:1 / -1; display:flex; flex-wrap:wrap; gap:var(--space-2) var(--space-5); }
+.site-footer .links a{ display:inline-flex; align-items:center; min-height:44px; text-decoration:underline; text-underline-offset:5px; text-decoration-thickness:1px; text-decoration-color:var(--line); transition:text-decoration-color var(--dur-1); }
+.site-footer .links a:hover{ text-decoration-color:currentColor; }
+.site-footer .copy{ grid-column:1 / -1; border-top:1px solid var(--line); padding-top:var(--space-5); }
+@media (min-width:960px){
+  .site-footer .brand{ grid-column:1 / 5; }
+  .site-footer address{ grid-column:5 / 9; }
+  .site-footer .links{ grid-column:9 / 13; justify-content:flex-end; }
+}
+
+/* ---------- mobile action bar ---------- */
+.actionbar{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line-inv);
+  padding-bottom:env(safe-area-inset-bottom); background-color:var(--brand); box-shadow:0 -1px 0 rgba(0,0,0,.08); }
+.actionbar a{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; min-height:64px; color:var(--brand-ink); text-decoration:none; font:600 .8125rem/1 var(--font-body); letter-spacing:.03em; background:var(--brand); transition:background-color var(--dur-1); }
+.actionbar a:first-child{ background:var(--accent); }
+.actionbar a:active{ background:var(--ink); }
+@media (min-width:768px){ .actionbar{ display:none; } }
+
+/* ---------- motion (JS only) ---------- */
+.js .line > span{ transform:translateY(105%); }
+.js .is-loaded .line > span{ transform:none; transition:transform 900ms var(--ease-out); }
+.js .is-loaded .line:nth-child(2) > span{ transition-delay:80ms; }
+.js .is-loaded .line:nth-child(3) > span{ transition-delay:160ms; }
+.js .site-header{ opacity:0; }
+.js .is-loaded .site-header, .js body.is-loaded .site-header{ opacity:1; transition:opacity var(--dur-2) var(--ease-out); }
+.js .hero__main{ clip-path:inset(100% 0 0 0 round 999px 999px 6px 6px); }
+.js .is-loaded .hero__main{ clip-path:inset(0 0 0 0 round 999px 999px 6px 6px); transition:clip-path 1100ms var(--ease-in-out) 200ms; }
+.js .hero__main img{ transform:scale(1.08); }
+.js .is-loaded .hero__main img{ transform:none; transition:transform 1400ms var(--ease-out) 200ms; }
+.js .hero__inset,.js .stamp,.js .hero__fade{ opacity:0; transform:translateY(16px); }
+.js .is-loaded .hero__inset,.js .is-loaded .stamp,.js .is-loaded .hero__fade{ opacity:1; transform:none; transition:opacity var(--dur-3) var(--ease-out) 500ms, transform var(--dur-3) var(--ease-out) 500ms; }
+.js [data-reveal]{ opacity:0; transform:translateY(22px); }
+.js [data-reveal].is-in{ opacity:1; transform:none; transition:opacity var(--dur-3) var(--ease-out), transform var(--dur-3) var(--ease-out); transition-delay:var(--d, 0ms); }
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{ animation:none !important; transition:none !important; }
+  .js .line > span,.js .hero__main img,.js .hero__inset,.js .stamp,.js .hero__fade,.js [data-reveal]{ transform:none !important; opacity:1 !important; }
+  .js .hero__main{ clip-path:none !important; }
+  .js .site-header{ opacity:1; }
+  .marquee__track{ width:auto; flex-wrap:wrap; }
+  .marquee__track ul[aria-hidden]{ display:none; }
+  .marquee ul{ flex-wrap:wrap; padding-inline:var(--gutter); row-gap:var(--space-3); }
+}
+</style>
+<script>
+document.documentElement.classList.add('js');
+document.addEventListener('DOMContentLoaded', function () {
+  var d = document, b = d.body;
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ b.classList.add('is-loaded'); }); });
+
+  /* header shrink */
+  var header = d.querySelector('.site-header');
+  var onScroll = function(){ header.classList.toggle('is-scrolled', scrollY > 24); };
+  addEventListener('scroll', onScroll, { passive:true }); onScroll();
+
+  /* menu */
+  var btn = d.querySelector('.menu-btn'), menu = d.getElementById('menu');
+  function setMenu(open){
+    btn.setAttribute('aria-expanded', open); btn.querySelector('.menu-btn__txt').textContent = open ? 'Fermer' : 'Menu';
+    menu.classList.toggle('is-open', open); menu.setAttribute('aria-hidden', !open); b.classList.toggle('menu-open', open);
+    if (open) menu.querySelector('a').focus({ preventScroll:true });
+  }
+  btn.addEventListener('click', function(){ setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function(e){ if (e.target.closest('a')) setMenu(false); });
+  d.addEventListener('keydown', function(e){ if (e.key === 'Escape' && menu.classList.contains('is-open')) { setMenu(false); btn.focus(); } });
+  matchMedia('(min-width:960px)').addEventListener('change', function(m){ if (m.matches) setMenu(false); });
+
+  /* reveals */
+  var els = d.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
+    }, { rootMargin:'0px 0px -8% 0px', threshold:.08 });
+    els.forEach(function(el){ io.observe(el); });
+  } else els.forEach(function(el){ el.classList.add('is-in'); });
+
+  /* review rail controls */
+  var rail = d.querySelector('.rail');
+  d.querySelectorAll('[data-rail]').forEach(function(c){
+    c.addEventListener('click', function(){ rail.scrollBy({ left:(+c.dataset.rail) * rail.clientWidth * .5, behavior:'smooth' }); });
+  });
+
+  /* hours + live status (Europe/Luxembourg) */
+  var HOURS = { lundi:'Ouvert 24h/24', mardi:'Ouvert 24h/24', mercredi:'Ouvert 24h/24', jeudi:'Ouvert 24h/24', vendredi:'Ouvert 24h/24', samedi:'Ouvert 24h/24', dimanche:'Ouvert 24h/24' };
+  var DAYS = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+  function ranges(s){
+    s = String(s || '').toLowerCase();
+    if (!s || /ferm/.test(s)) return [];
+    if (/24\s*h|24\/24|24 heures/.test(s)) return [[0, 1440]];
+    var out = [], re = /(\d{1,2})(?:[:h.](\d{2}))?\s*[–—-]\s*(\d{1,2})(?:[:h.](\d{2}))?/g, m;
+    while ((m = re.exec(s))) { var a = m[1]*60 + (+m[2]||0), z = m[3]*60 + (+m[4]||0); if (z <= a) z += 1440; out.push([a, z]); }
+    return out;
+  }
+  function fmt(min){ min = min % 1440; var h = Math.floor(min/60), mm = min % 60; return h + 'h' + (mm ? String(mm).padStart(2,'0') : ''); }
+  function now(){
+    try {
+      var p = new Intl.DateTimeFormat('fr-FR', { timeZone:'Europe/Luxembourg', weekday:'long', hour:'2-digit', minute:'2-digit', hourCycle:'h23' }).formatToParts(new Date()), o = {};
+      p.forEach(function(x){ o[x.type] = x.value; });
+      var i = DAYS.indexOf(o.weekday.toLowerCase());
+      if (i > -1) return { day:i, min:(+o.hour % 24)*60 + (+o.minute), hh:String(+o.hour % 24).padStart(2,'0'), mm:o.minute };
+    } catch (e) {}
+    var t = new Date(); return { day:t.getDay(), min:t.getHours()*60 + t.getMinutes(), hh:String(t.getHours()).padStart(2,'0'), mm:String(t.getMinutes()).padStart(2,'0') };
+  }
+  function status(){
+    var n = now(), today = ranges(HOURS[DAYS[n.day]]), yest = ranges(HOURS[DAYS[(n.day+6)%7]]), i, r;
+    for (i = 0; i < today.length; i++) { r = today[i]; if (n.min >= r[0] && n.min < r[1]) return { open:true, txt: r[1]-r[0] >= 1440 ? 'Ouvert maintenant · 24 h/24' : 'Ouvert · jusqu’à ' + fmt(r[1]), n:n }; }
+    for (i = 0; i < yest.length; i++) { r = yest[i]; if (r[1] > 1440 && n.min + 1440 < r[1]) return { open:true, txt:'Ouvert · jusqu’à ' + fmt(r[1]), n:n }; }
+    for (var k = 0; k < 8; k++) {
+      var day = (n.day + k) % 7, rs = ranges(HOURS[DAYS[day]]);
+      for (i = 0; i < rs.length; i++) if (k > 0 || rs[i][0] > n.min) {
+        var when = k === 0 ? '' : k === 1 ? 'demain ' : DAYS[day] + ' ';
+        return { open:false, txt:'Fermé · ouvre ' + when + 'à ' + fmt(rs[i][0]), n:n };
+      }
+    }
+    return { open:false, txt:'Fermé', n:n };
+  }
+  function paint(){
+    var s = status();
+    d.querySelectorAll('[data-status]').forEach(function(el){ el.dataset.open = s.open; el.querySelector('[data-status-txt]').textContent = s.txt; });
+    var c = d.querySelector('[data-clock]'); if (c) c.textContent = s.n.hh + ':' + s.n.mm;
+    d.querySelectorAll('.hours tr').forEach(function(tr){ var on = tr.dataset.day === DAYS[s.n.day]; tr.classList.toggle('is-today', on); if (on) tr.setAttribute('aria-current','date'); else tr.removeAttribute('aria-current'); });
+  }
+  paint(); setInterval(paint, 30000);
+
+  d.querySelectorAll('[data-year]').forEach(function(el){ el.textContent = new Date().getFullYear(); });
+});
+</script>
+<!--sf:preview--><meta name="robots" content="noindex, nofollow"><!--/sf:preview-->
+<!--sf:og--><meta property="og:image" content="https://pawfect-partners-strassen.aymenjallouli.dev/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://pawfect-partners-strassen.aymenjallouli.dev/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://pawfect-partners-strassen.aymenjallouli.dev/og.jpg"><!--/sf:og-->
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Pawfect Partners, retour en haut">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#27412e"/><g fill="#f3ece1"><ellipse cx="13" cy="15.5" rx="2.6" ry="3.4" transform="rotate(-18 13 15.5)"/><ellipse cx="18" cy="11.5" rx="2.6" ry="3.5"/><ellipse cx="23.5" cy="12" rx="2.6" ry="3.5" transform="rotate(10 23.5 12)"/><ellipse cx="28" cy="16.5" rx="2.5" ry="3.3" transform="rotate(24 28 16.5)"/><path d="M20.5 18.5c3.8 0 7.6 4.6 7.6 8 0 2.6-2.2 3.6-4.2 3.1-1.4-.3-2.2-.9-3.4-.9s-2 .6-3.4.9c-2 .5-4.2-.5-4.2-3.1 0-3.4 3.8-8 7.6-8z"/></g></svg>
+      <span class="brand__name">Pawfect <em>Partners</em></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#avis">Avis</a><a href="#methode">Méthode</a><a href="#accompagnement">Accompagnement</a><a href="#photos">Photos</a><a href="#horaires">Horaires</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn header-cta" href="tel:+352621491508"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 6.3 6.3l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>+352 621 491 508</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-btn__lines" aria-hidden="true"></span><span class="menu-btn__txt">Menu</span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Menu mobile">
+    <ol>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#accompagnement">Accompagnement</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#horaires">Horaires</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+  <p class="menu__foot">12A Duerfstrooss, 3985 Pissange <span class="nw">Reckange-sur-Mess</span><br>+352 621 491 508</p>
+</div>
+
+<main id="contenu">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+        <div class="hero__meta hero__fade">
+          <span class="label">Éducation canine · Strassen</span>
+          <span class="status" data-status><span class="status__dot" aria-hidden="true"></span><span data-status-txt>Horaires&nbsp;: 7&nbsp;j/7</span></span>
+        </div>
+        <h1 id="hero-title"><span class="line"><span>Steve</span></span><span class="line"><span>parle</span></span><span class="line"><span><em>chien</em>.</span></span></h1>
+      <div class="hero__media">
+        <div class="arch hero__main">
+          <img src="assets/photos/photo-10.jpg" width="1200" height="1600" fetchpriority="high" alt="Steve assis au soleil, entouré de quatre chiens qui se pressent contre lui">
+        </div>
+        <div class="hero__inset">
+          <img src="assets/photos/photo-05.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Un golden retriever mouillé, langue sortie, assis en laisse sur des pavés">
+        </div>
+        <div class="stamp" aria-hidden="true">
+          <svg viewBox="0 0 120 120" class="stamp__ring"><defs><path id="ring" d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1-94 0"/></defs><text><textPath href="#ring" textLength="290" lengthAdjust="spacing">5,0 sur Google · 45 avis · Pawfect Partners ·</textPath></text></svg>
+          <span class="stamp__core">5,0<small>★★★★★</small></span>
+        </div>
+        <p class="hero__caption hero__fade">Steve, au milieu de la meute.</p>
+      </div>
+      <div class="hero__body hero__fade">
+        <p class="hero__sub">Il lit le caractère, le passé et les instincts de votre chien. Ensuite seulement, il l’éduque. Avec vous.</p>
+        <a class="hero__proof" href="https://www.google.com/maps/place/?q=place_id:ChIJHxncBQBLlUcRP2zc7uh4z_k" target="_blank" rel="noopener">
+            <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg></span>
+            <b>5,0</b><span class="u">45 avis Google</span>
+          </a>
+        <div class="hero__cta">
+          <a class="btn" href="tel:+352621491508"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 6.3 6.3l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>Appeler Steve</a>
+          <a class="btn btn--ghost btn--sms" href="sms:+352621491508?&amp;body=Bonjour%20Steve%2C%20je%20vous%20%C3%A9cris%20au%20sujet%20de%20mon%20chien.%20Pourriez-vous%20me%20recontacter%20%3F%20Merci." aria-label="Envoyer un SMS à Steve"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3.5z"/><path d="M8 10h8M8 13h5"/></svg><span class="btn__lbl">Envoyer un SMS</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-label="Ce que disent les clients">
+    <div class="marquee__track">
+      <ul>
+        <li>«&nbsp;doux et ferme quand il le faut&nbsp;»</li>
+        <li>«&nbsp;les progrès sont impressionnants et rapides&nbsp;»</li>
+        <li>«&nbsp;une nette amélioration&nbsp;»</li>
+        <li>«&nbsp;entre de bonnes mains&nbsp;»</li>
+        <li>«&nbsp;parler, lire et comprendre&nbsp;»</li>
+        <li>«&nbsp;bien plus concluante&nbsp;»</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>«&nbsp;doux et ferme quand il le faut&nbsp;»</li>
+        <li>«&nbsp;les progrès sont impressionnants et rapides&nbsp;»</li>
+        <li>«&nbsp;une nette amélioration&nbsp;»</li>
+        <li>«&nbsp;entre de bonnes mains&nbsp;»</li>
+        <li>«&nbsp;parler, lire et comprendre&nbsp;»</li>
+        <li>«&nbsp;bien plus concluante&nbsp;»</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="proof" id="avis" aria-labelledby="avis-title">
+    <div class="wrap grid">
+      <div class="proof__head" data-reveal>
+        <span class="label">Avis Google</span>
+        <div class="score">
+          <span class="score__num">5,0</span>
+          <div class="score__side">
+            <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg></span>
+            <p><span class="sr">Note de 5,0 sur 5, </span>45 avis sur Google</p>
+          </div>
+        </div>
+        <h2 id="avis-title">Ses clients le décrivent mieux que nous.</h2>
+        <a class="proof__link ul" href="https://www.google.com/maps/place/?q=place_id:ChIJHxncBQBLlUcRP2zc7uh4z_k" target="_blank" rel="noopener">Voir les 45 avis sur Google</a>
+      </div>
+
+      <div class="rail-wrap" data-reveal style="--d:120ms">
+        <div class="rail" tabindex="0" aria-label="Avis clients, faites défiler">
+          <figure class="review">
+            <blockquote>Il prend vraiment le temps d’analyser la psychologie du chien, en tenant compte de son caractère, de son passé et de ses instincts propres. Steve a très bien compris cela et sait s’adapter avec justesse&nbsp;: il est à la fois doux et ferme quand il le faut…</blockquote>
+            <figcaption>Lara L.<span class="stars" role="img" aria-label="5 étoiles sur 5">★★★★★</span></figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>Steve m a beaucoup aidé et m aide encore pour l éducation de mon chien qui a eu un parcours difficile depuis sa naissance, les progrès sont impressionnants et rapides par rapport aux traumatismes subit par ma louloute adorée, recommandation 100%…</blockquote>
+            <figcaption>Catherine V.<span class="stars" role="img" aria-label="5 étoiles sur 5">★★★★★</span></figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>Ses explications et conseils sont vraiment appropriés aux différentes situations, et j’ai constaté assez rapidement une nette amélioration au niveau de l’éducation et de l’obéissance de mon chien. Je ne peux que vivement le recommander.</blockquote>
+            <figcaption>Michel K.<span class="stars" role="img" aria-label="5 étoiles sur 5">★★★★★</span></figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>Steve aime et comprends les chiens, il a une grande connaissance du comportement et de la psychologie du chien qu’il a étudié… Je recommande Steve les yeux fermés…</blockquote>
+            <figcaption>Marie-Claire<span class="stars" role="img" aria-label="5 étoiles sur 5">★★★★★</span></figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>Steve consacre son temps à bien analyser la situation de vie, le comportement de l’animal pour bien mettre en oeuvre un plan d’action adapté et réfléchi pour le chien et son propriétaire.</blockquote>
+            <figcaption>Caroline<span class="stars" role="img" aria-label="5 étoiles sur 5">★★★★★</span></figcaption>
+          </figure>
+        </div>
+        <div class="rail-ctrl">
+          <button type="button" data-rail="-1" aria-label="Avis précédents"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button type="button" data-rail="1" aria-label="Avis suivants"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="method" id="methode" aria-labelledby="methode-title">
+    <div class="wrap grid">
+      <figure class="method__media" data-reveal>
+        <div class="frame"><img src="assets/photos/photo-04.jpg" width="900" height="1600" loading="lazy" decoding="async" alt="Steve marche, un labrador noir au pied, les yeux levés vers lui"></div>
+        <figcaption>Au pied, sans tirer, le regard vers le maître.</figcaption>
+      </figure>
+      <div class="method__body">
+        <div data-reveal>
+          <span class="label">La méthode</span>
+          <h2 id="methode-title">D’abord comprendre. <em>Ensuite</em> éduquer.</h2>
+          <p class="lede">Un chien qui n’écoute pas, qui a peur ou qui a souffert a toujours une raison. Steve commence par la chercher. Le plan vient après, pensé pour le chien et pour vous.</p>
+        </div>
+        <ol class="steps">
+          <li data-reveal><span class="steps__n">i.</span><div><h3>Observer</h3><p>Le caractère, le passé, les instincts propres de votre chien. Après un premier éducateur sans résultat, Lara L. décrit une première rencontre <q>bien plus concluante</q>.</p></div></li>
+          <li data-reveal style="--d:80ms"><span class="steps__n">ii.</span><div><h3>Ajuster</h3><p>Ni laxisme ni dureté&nbsp;: <q>doux et ferme quand il le faut, tout en restant toujours bienveillant</q>, résume-t-elle.</p></div></li>
+          <li data-reveal style="--d:160ms"><span class="steps__n">iii.</span><div><h3>Avancer ensemble</h3><p>Le maître repart avec des repères clairs. Pour Michel K., ses <q>explications et conseils sont vraiment appropriés aux différentes situations</q>.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="care" id="accompagnement" aria-labelledby="care-title">
+    <div class="wrap">
+      <div class="care__head" data-reveal>
+        <h2 id="care-title">Ce que vous pouvez travailler avec lui.</h2>
+        <span class="label">Accompagnement</span>
+      </div>
+      <ol class="care__list">
+        <li class="care__item" data-reveal>
+          <span class="care__num" aria-hidden="true"></span>
+          <h3>L’éducation et l’obéissance au quotidien</h3>
+          <blockquote>«&nbsp;une nette amélioration au niveau de l’éducation et de l’obéissance de mon chien&nbsp;»<cite>Michel K.</cite></blockquote>
+        </li>
+        <li class="care__item" data-reveal>
+          <span class="care__num" aria-hidden="true"></span>
+          <h3>Le comportement, lu à travers la psychologie du chien</h3>
+          <blockquote>«&nbsp;une grande connaissance du comportement et de la psychologie du chien&nbsp;»<cite>Marie-Claire</cite></blockquote>
+        </li>
+        <li class="care__item" data-reveal>
+          <span class="care__num" aria-hidden="true"></span>
+          <h3>Les chiens au parcours difficile</h3>
+          <blockquote>«&nbsp;mon chien qui a eu un parcours difficile depuis sa naissance, les progrès sont impressionnants et rapides&nbsp;»<cite>Catherine V.</cite></blockquote>
+        </li>
+        <li class="care__item" data-reveal>
+          <span class="care__num" aria-hidden="true"></span>
+          <h3>Un plan pour le chien et pour son maître</h3>
+          <blockquote>«&nbsp;un plan d’action adapté et réfléchi pour le chien et son propriétaire&nbsp;»<cite>Caroline</cite></blockquote>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sunset" aria-label="Témoignage">
+    <div class="sunset__img">
+      <img src="assets/photos/photo-07.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Au coucher du soleil, Steve soulève un jeune chien noir qui lui lèche le visage, un setter blanc et roux les regarde">
+    </div>
+    <figure class="sunset__panel inv" data-reveal>
+      <blockquote><p>Il sait <b>«&nbsp;parler, lire et comprendre&nbsp;»</b> le langage des chiens.</p></blockquote>
+      <figcaption><span class="stars" aria-hidden="true">★★★★★</span>Caroline, avis Google</figcaption>
+    </figure>
+    <div class="sunset__pad" aria-hidden="true"></div>
+  </section>
+
+  <section class="gallery inv" id="photos" aria-labelledby="photos-title">
+    <div class="wrap">
+      <div class="gallery__head" data-reveal>
+        <div>
+          <span class="label">Sur le terrain</span>
+          <h2 id="photos-title" style="margin-top:var(--space-4)">Champs, <span class="nw">sous-bois</span>, <em>trottoirs</em>.</h2>
+        </div>
+        <p>Quelques-uns des chiens croisés en chemin. Calmes, attentifs, souvent un peu boueux.</p>
+      </div>
+      <div class="collage" role="list">
+        <figure class="g-a" role="listitem" data-reveal>
+          <div class="ph"><img src="assets/photos/photo-12.jpg" width="900" height="1600" loading="lazy" decoding="async" alt="Un chien blanc tacheté de roux, museau couvert de terre, couché au bord d’un champ labouré"></div>
+          <figcaption>Le museau dans les labours.</figcaption>
+        </figure>
+        <figure class="g-b" role="listitem" data-reveal style="--d:80ms">
+          <div class="ph"><img src="assets/photos/photo-03.jpg" width="1600" height="901" loading="lazy" decoding="async" alt="Un grand chien gris allongé, détendu, sur un parquet"></div>
+          <figcaption>Le calme, aussi, s’apprend.</figcaption>
+        </figure>
+        <figure class="g-c" role="listitem" data-reveal style="--d:160ms">
+          <div class="ph"><img src="assets/photos/photo-08.jpg" width="900" height="1600" loading="lazy" decoding="async" alt="Trois chiens assis côte à côte au milieu d’une prairie, sous un ciel nuageux"></div>
+          <figcaption>Assis. Tous les trois.</figcaption>
+        </figure>
+        <figure class="g-d" role="listitem" data-reveal style="--d:240ms">
+          <div class="ph"><img src="assets/photos/photo-02.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Un chien blanc et roux couché et un labrador noir assis dans l’herbe, en lisière de forêt"></div>
+          <figcaption>Pause en lisière de forêt.</figcaption>
+        </figure>
+      </div>
+      <p class="swipe-hint" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Faites glisser</p>
+    </div>
+  </section>
+
+  <section class="visit" id="horaires" aria-labelledby="horaires-title">
+    <div class="wrap grid">
+      <div class="visit__hours" data-reveal>
+        <span class="label">Horaires &amp; accès</span>
+        <h2 id="horaires-title">Sept jours sur sept.</h2>
+        <div class="clock" aria-live="polite">
+          <span class="clock__time" data-clock aria-hidden="true">7&nbsp;j/7</span>
+          <span class="status" data-status><span class="status__dot" aria-hidden="true"></span><span data-status-txt>Ouvert 24h/24, tous les jours</span></span>
+          <p>Heure du Luxembourg.</p>
+        </div>
+        <table class="hours">
+          <caption class="sr">Horaires d’ouverture</caption>
+          <tbody>
+            <tr data-day="lundi"><th scope="row">lundi</th><td>Ouvert 24h/24</td></tr>
+            <tr data-day="mardi"><th scope="row">mardi</th><td>Ouvert 24h/24</td></tr>
+            <tr data-day="mercredi"><th scope="row">mercredi</th><td>Ouvert 24h/24</td></tr>
+            <tr data-day="jeudi"><th scope="row">jeudi</th><td>Ouvert 24h/24</td></tr>
+            <tr data-day="vendredi"><th scope="row">vendredi</th><td>Ouvert 24h/24</td></tr>
+            <tr data-day="samedi"><th scope="row">samedi</th><td>Ouvert 24h/24</td></tr>
+            <tr data-day="dimanche"><th scope="row">dimanche</th><td>Ouvert 24h/24</td></tr>
+          </tbody>
+        </table>
+        <ul class="practical" aria-label="Infos pratiques">
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Services sur place</li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Parking accessible en fauteuil roulant</li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>LGBTQ+ friendly</li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Safe place pour les transgenres</li>
+        </ul>
+      </div>
+      <div class="visit__map" data-reveal style="--d:120ms">
+        <div class="map">
+          <a class="map__fallback" href="https://www.google.com/maps/place/?q=place_id:ChIJHxncBQBLlUcRP2zc7uh4z_k" target="_blank" rel="noopener">Ouvrir la carte dans Google Maps</a>
+          <iframe src="https://www.google.com/maps?q=Pawfect%20Partners%2C%2012A%20Duerfstrooss%2C%203985%20Pissange%20Reckange-sur-Mess&amp;output=embed&amp;hl=fr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte : Pawfect Partners, 12A Duerfstrooss, Pissange"></iframe>
+        </div>
+        <div class="address">
+          <p>12A Duerfstrooss<br>3985 Pissange <span class="nw">Reckange-sur-Mess</span></p>
+          <div class="row">
+            <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Pawfect%20Partners%2C%2012A%20Duerfstrooss%2C%203985%20Pissange%20Reckange-sur-Mess" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Itinéraire</a>
+            <a class="btn btn--ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJHxncBQBLlUcRP2zc7uh4z_k" target="_blank" rel="noopener">Voir sur Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact inv" id="contact" aria-labelledby="contact-title">
+    <div class="wrap grid">
+      <div class="contact__body" data-reveal>
+        <span class="label">Contact</span>
+        <h2 id="contact-title" style="margin-top:var(--space-5)">Parlez-lui de <em>votre</em> chien.</h2>
+        <p>Son âge, son histoire, ce qui coince au quotidien. Un appel ou un SMS suffit pour commencer.</p>
+        <a class="phone-big" href="tel:+352621491508">+352 621 491 508</a>
+        <div class="contact__cta">
+          <a class="btn" href="tel:+352621491508"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 6.3 6.3l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>Appeler</a>
+          <a class="btn btn--ghost" href="sms:+352621491508?&amp;body=Bonjour%20Steve%2C%20je%20vous%20%C3%A9cris%20au%20sujet%20de%20mon%20chien.%20Pourriez-vous%20me%20recontacter%20%3F%20Merci."><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3.5z"/><path d="M8 10h8M8 13h5"/></svg>Envoyer un SMS</a>
+        </div>
+      </div>
+      <div class="contact__photo" data-reveal style="--d:120ms">
+        <div class="arch"><img src="assets/photos/photo-09.jpg" width="1197" height="1600" loading="lazy" decoding="async" alt="Steve accroupi dans un jardin, entouré de deux jack russells et de trois grands chiens"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap grid">
+    <a class="brand" href="#top" aria-label="Pawfect Partners, retour en haut">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#27412e"/><g fill="#f3ece1"><ellipse cx="13" cy="15.5" rx="2.6" ry="3.4" transform="rotate(-18 13 15.5)"/><ellipse cx="18" cy="11.5" rx="2.6" ry="3.5"/><ellipse cx="23.5" cy="12" rx="2.6" ry="3.5" transform="rotate(10 23.5 12)"/><ellipse cx="28" cy="16.5" rx="2.5" ry="3.3" transform="rotate(24 28 16.5)"/><path d="M20.5 18.5c3.8 0 7.6 4.6 7.6 8 0 2.6-2.2 3.6-4.2 3.1-1.4-.3-2.2-.9-3.4-.9s-2 .6-3.4.9c-2 .5-4.2-.5-4.2-3.1 0-3.4 3.8-8 7.6-8z"/></g></svg>
+      <span class="brand__name">Pawfect <em>Partners</em></span>
+    </a>
+    <address>Dresseur pour chiens<br>12A Duerfstrooss, 3985 Pissange <span class="nw">Reckange-sur-Mess</span><br>Luxembourg</address>
+    <div class="links">
+      <a href="tel:+352621491508">+352 621 491 508</a>
+      <a href="https://www.google.com/maps/place/?q=place_id:ChIJHxncBQBLlUcRP2zc7uh4z_k" target="_blank" rel="noopener">Avis Google</a>
+    </div>
+    <p class="copy">© <span data-year>2026</span> Pawfect Partners · Strassen, Luxembourg</p>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Actions rapides">
+  <a href="tel:+352621491508"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 6.3 6.3l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>Appeler</a>
+  <a href="sms:+352621491508?&amp;body=Bonjour%20Steve%2C%20je%20vous%20%C3%A9cris%20au%20sujet%20de%20mon%20chien.%20Pourriez-vous%20me%20recontacter%20%3F%20Merci."><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3.5z"/><path d="M8 10h8M8 13h5"/></svg>SMS</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Pawfect%20Partners%2C%2012A%20Duerfstrooss%2C%203985%20Pissange%20Reckange-sur-Mess" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Itinéraire</a>
+</nav>
+<!--sf:preview--><div style="padding:18px 16px;font:13px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;background:#0f0f10;color:#a3a3a8">Aperçu réalisé par Aymen Jallouli pour Pawfect Partners : ce site n'est pas encore le site officiel de l'établissement.</div><!--/sf:preview-->
+<!--sf:track--><script>(function(){try{var q=new URLSearchParams(location.search),r=q.get('r')||sessionStorage.getItem('sf_r');if(!r)return;sessionStorage.setItem('sf_r',r);navigator.sendBeacon("https://track.aymenjallouli.dev/t"+'?r='+encodeURIComponent(r)+'&p='+encodeURIComponent(location.pathname));}catch(e){}})();</script><!--/sf:track-->
+</body>
+</html>
